@@ -12,11 +12,13 @@ public class TestController {
     String test() {
         Random random = new Random();
         int y = random.nextInt(100);
-        Integer x = null;
-        if(y > 50) {
-            x = y;
-        }
-        int ans = 1000/x;
+         Random random = new Random();
+         int y = random.nextInt(100);
+-        Integer x = null;
+-        if(y > 50) {
+-            x = y;
+        int x = (y > 50) ? y : 1;
+         int ans = 1000/x;
         return "Test" + ans;
     }
 }
